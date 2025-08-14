@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No Work | S’il vous plaît, ne dites pas juste "ça marche pas 😭"</title>
+
+  <!-- Import de la police Inter pour .intro -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ <style>
+    .lang-select {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sélecteur de langue -->
+
+  <button id="toggle-theme">🌙 Mode sombre</button>
+
+  <main>
+    <!-- Titre principal -->
+    <div class="title-container">
+      <span class="static-text">No</span>
+      <span class="typing-text">work</span>
+    </div>
+    <p class="subtitle">s’il vous plaît, ne dites pas juste "ça marche pas 😭" dans le chat</p>
+
+    <!-- Intro -->
+    <p class="lead">
+      Imaginez que vous appelez quelqu'un au téléphone, que vous lui dites <b>"Mon PC marche pas !"</b>
+      et que vous le mettez en attente sans autre mot… 🙄
+    </p>
+
+    <!-- Mauvais exemple -->
+    <section>
+      <div style="flex:1">
+        <h2 class="red">❌ Ne fais pas ça</h2>
+        <div class="chat-box">
+          <article>
+            <img src="https://i.pravatar.cc/60?img=3" alt="Alex" />
+            <div>
+              <header><span>Alex</span><time>14:08</time></header>
+              <p>ça marche pas 😭</p>
+            </div>
+          </article>
+          <article>
+            <img src="https://i.pravatar.cc/60?img=5" alt="Maya" />
+            <div>
+              <header><span>Maya</span><time>14:09</time></header>
+              <p>C’est quoi le souci exactement ?</p>
+            </div>
+          </article>
+          <article>
+            <img src="https://i.pravatar.cc/60?img=3" alt="Alex" />
+            <div>
+              <header><span>Alex</span><time>14:12</time></header>
+              <p>Je sais pas encore, je regarde...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <aside style="flex:1">
+        <p>Notez qu’Alex aurait pu poser sa vraie question tout de suite. Maya aurait pu commencer à réfléchir au problème plutôt que d’attendre un message flou.</p>
+        <p>Les gens font ça pour être polis — mais dans un chat, ça ralentit tout. Quand vous dites "ça marche pas", vous perdez du temps au lieu d’en faire gagner.</p>
+        <ul>
+          <li>"❌ ça marche pas"</li>
+          <li>"❌ erreur chelou"</li>
+          <li>"❌ tu peux check un truc vite fait ?"</li>
+          <li>"❌ t dispo ?"</li>
+        </ul>
+        <p>💡 <b>Soyez direct·e.</b> Expliquez le souci dès le premier message !</p>
+      </aside>
+    </section>
+
+    <!-- Bon exemple -->
+    <section>
+      <div style="flex:1">
+        <h2 class="green">✅ Fais plutôt ça</h2>
+        <div class="chat-box">
+          <article>
+            <img src="https://i.pravatar.cc/60?img=2" alt="Julie" />
+            <div>
+              <header><span>Julie</span><time>10:33</time></header>
+              <p>Hello ! Je fetch /api/data avec axios dans getData(). En staging, je reçois une 500. En local tout passe. Token envoyé. Tu peux jeter un œil ? 🙏</p>
+            </div>
+          </article>
+          <article>
+            <img src="https://i.pravatar.cc/60?img=6" alt="Ben" />
+            <div>
+              <header><span>Ben</span><time>10:35</time></header>
+              <p>Merci pour les détails, je regarde !</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <aside style="flex:1">
+        <p>Julie donne toutes les infos utiles dès le départ :</p>
+        <ul>
+          <li>✅ Ce qu’elle essaie de faire</li>
+          <li>✅ Où ça coince (environnement, fonction)</li>
+          <li>✅ Le message d’erreur</li>
+          <li>✅ Ce qu’elle a déjà vérifié</li>
+        </ul>
+        <p>🧠 Donnez le max de détails dès le début. C’est pro et efficace.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>Merci d’avoir lu ! Si vous avez trouvé ça utile, partagez-le avec vos collègues !</p> <p>Vous pouvez aussi me suivre sur <a href="https://github.com/NycolazSec" target="_blank">Github</a>
+  </footer>
+    <script src="./assets/js/lang-toggle.js"></script>
+
+  <script src="./assets/js/theme.js"></script>
+</body>
+</html>

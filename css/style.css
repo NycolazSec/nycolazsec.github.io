@@ -1,0 +1,193 @@
+    :root {
+      --bg: #f5f8fa;
+      --text: #222;
+      --primary: #0b6fc2;
+      --bubble1: #e4e6eb;
+      --bubble2: #d1e7ff;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --primary: #4da3ff;
+      --bubble1: #2a2a2a;
+      --bubble2: #1e3a5f;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      margin: 40px;
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+    main {
+      max-width: 1600px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .title-container {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .static-text {
+      margin-right: 10px;
+    }
+
+    .typing-text {
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(4) forwards, blink 0.7s step-end infinite;
+      position: relative;
+      color: var(--text);
+    }
+
+    /* Ligne rouge qui barre "work" */
+    .typing-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;  /* au lieu de bottom: 50% */
+      width: 100%;
+      height: 3px;
+      background-color: red;
+      animation: strike 2s forwards;
+      animation-delay: 0.3s;
+      transform-origin: left;
+      transform: scaleX(0) translateY(-50%); /* combine les deux transforms */
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 4ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+      100% { border-color: red; }
+    }
+
+    @keyframes strike {
+      to { transform: scaleX(1); }
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    /* Police spéciale Inter uniquement pour ce paragraphe */
+    .intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 30px auto;
+      font-size: 1.4rem;
+      font-weight: normal;
+      font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .lead {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 300;
+    margin-top: 60px;
+    line-height: 55px;
+  }
+
+    #toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 100;
+    }
+    #toggle-theme:hover { background: #0a5aa3; }
+
+    section {
+      background: var(--bg);
+      border-radius: 25px;
+      padding: 35px;
+      margin: 35px 0;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: background 0.3s;
+    }
+    h2 {
+      margin: 0 0 20px 0;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2.red { color: #d93025; }
+    h2.green { color: #188038; }
+
+    ul { padding-left: 26px; }
+    li { margin-bottom: 12px; }
+
+    .chat-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: var(--bg);
+      padding: 20px;
+      border-radius: 20px;
+      min-width: 350px;
+      flex: 1;
+    }
+    article {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    article img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+    article header {
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    article time {
+      font-weight: normal;
+      color: #777;
+      font-size: 1rem;
+    }
+    article p {
+      margin: 5px 0 0;
+      font-size: 1.15rem;
+      padding: 14px 18px;
+      border-radius: 25px;
+      max-width: 700px;
+      line-height: 1.6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: background 0.3s, color 0.3s;
+    }
+    article:nth-child(odd) p { background: var(--bubble1); color: var(--text); }
+    article:nth-child(even) p { background: var(--bubble2); color: var(--text); }
+
+    footer {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 50px;
+    }
+    footer a { color: var(--primary); }
