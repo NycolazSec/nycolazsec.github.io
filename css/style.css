@@ -46,19 +46,18 @@
       color: var(--text);
     }
 
-    /* Ligne rouge qui barre "work" */
     .typing-text::after {
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;  /* au lieu de bottom: 50% */
+      top: 50%;  
       width: 100%;
       height: 3px;
       background-color: red;
       animation: strike 2s forwards;
       animation-delay: 0.3s;
       transform-origin: left;
-      transform: scaleX(0) translateY(-50%); /* combine les deux transforms */
+      transform: scaleX(0) translateY(-50%); 
     }
 
     @keyframes typing {
@@ -81,7 +80,6 @@
       text-align: center;
     }
 
-    /* Police spéciale Inter uniquement pour ce paragraphe */
     .intro {
       text-align: center;
       max-width: 900px;
